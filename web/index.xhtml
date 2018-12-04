@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Nombre-Ip-MacAdrees</title>
+    </h:head>
+    <h:body>
+        <center>
+            <h:form id="frm">
+                <h:panelGrid columns="2" id="panel">
+                    <p:outputLabel value="Direccion IP" />
+                    <p:outputLabel value=" #{controller.ipNom} " id="Ip"/>
+                    <p:outputLabel value="Nombre del Host" />
+                    <p:outputLabel value=" #{controller.nombre} " id="Nombre"/>
+                    <p:outputLabel value="Direccion Fisica" />
+                    <p:outputLabel value="#{controller.macAdrees}" id="Mac" />
+                    <br/>
+                    <br/>
+                    <p:commandButton value="IP, NOMBRE Y MAC" actionListener="#{controller.consultarVariables()}" update="Ip Nombre Mac"/>
+                    
+                </h:panelGrid>  
+            </h:form></center>
+
+    </h:body>
+</html>      
